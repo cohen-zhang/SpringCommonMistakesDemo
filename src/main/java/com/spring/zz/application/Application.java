@@ -3,13 +3,15 @@
  * 启动类
  */
 
-package application;
+package com.spring.zz.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 
-//省略 import
 @SpringBootApplication
+@ComponentScans(value = { @ComponentScan(value = "com.spring.zz.controller") })
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
